@@ -6,7 +6,6 @@ public int Persistence(long num)
                 string numText = num.ToString();
                 int count = 0;
                 int value = 1;
-
                 while ((n != 1) && (n != 0))
                 {
                     char[] charArr = numText.ToCharArray();
