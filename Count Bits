@@ -1,0 +1,31 @@
+ public int CountBits(int num)
+        {
+            try
+            {
+                int count = 0;
+                string result = "";
+                while (num > 1)
+                {
+                    int residuo = num % 2;
+                    result = Convert.ToString(residuo) + result;
+                    num /= 2;
+                }
+                result = Convert.ToString(num) + result;
+                //Valida cantidad de unos en el número binario
+                char[] charArr = result.ToCharArray();
+                
+                foreach (char ch in charArr)
+                {
+                    if (ch.ToString().Contains("1"))
+                    {   
+                        count++;
+                    }
+                }
+                return count;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
